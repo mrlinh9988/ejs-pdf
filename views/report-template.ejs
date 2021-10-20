@@ -19,7 +19,7 @@ table, th, td {
 	<table style="text-allign : center">
 		<% if (students.length > 0) { %>
 			<% students.forEach(student => {%>
-				<tr><td><%= student.name %></td><td><%= student.email %></td><td><%= student.city %></td><td><%= student.country %></td></tr>
+				<tr><td><%= student.title %></td><td><%= student.id %></td><td><%= student.userId %></td><td><%= student.completed %></td></tr>
 		<%	});%>
 		<% }%>
 	</table>	
