@@ -49,7 +49,7 @@ app.get('/generateReport', async (req, res) => {
     let students = await getData();
 		console.log('students: ', students);
     ejs.renderFile(
-      path.join(__dirname, './views/', 'report-template.ejs'),
+      path.join(__dirname, './views/', 'certificate-template.ejs'),
       {
         students: students,
       },
@@ -74,7 +74,7 @@ app.get('/generateReport', async (req, res) => {
 
               res.send(err);
             } else {
-              res.render('report-template', {
+              res.render('certificate-template', {
                 students: students,
               });
               // res.send('File created successfully');
